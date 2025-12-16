@@ -1,6 +1,6 @@
 x-customizable-image: &customizable_image
   # Edit image to project's custom image, Edit mounted volumes to project's custom app folders
-  image: firstcraft/frstcraft_custom:latest
+  image: firstcraft/firstcraft_custom:latest
   pull_policy: never
   volumes:
     - /home/sayhi/volumes/firstcraft_custom:/home/frappe/frappe-bench/apps/firstcraft_custom
