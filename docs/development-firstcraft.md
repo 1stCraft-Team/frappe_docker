@@ -6,13 +6,11 @@ refer to Prerequisites sections in https://github.com/1stCraft-Team/frappe_docke
 
 ## Bootstrap Containers for development
 
-Clone and change directory to frappe_docker_{project} directory.
-
-**Change {project} to your project name**
+Clone frappe_docker
 
 ```shell
-mkdir frappe_docker_{project}
-cd frappe_docker_{project}
+mkdir frappe_docker
+cd frappe_docker
 git clone https://github.com/1stCraft-Team/frappe_docker.git .
 ```
 
@@ -49,7 +47,7 @@ https://github.com/1stCraft-Team/frappe_docker/blob/firstcraft/docs/development.
 
 ## Get App Json
 
-Get apps.json from your team and place it alongside apps-example.json
+**Get {project_name}-apps.json from your team and place it alongside apps-example.json**
 
 
 ## Setup bench / new site using script
@@ -58,22 +56,24 @@ Init bench, install site, etc. from script.
 
 **Change {frappe version} to your project**
 ```shell
-python installer.py -j apps.json -t {frappe version}
+python install.py {project_name} -t {frappe version}
 # example:
-python installer.py -j apps.json -t v15.45.0
+python install.py mis -t v15.45.1
 ```
 
 A new bench and / or site is created for the client with following defaults.
 
 - MariaDB root password: `123`
-- Admin password: `admin`
+- Admin password: `123`
 
 
 ## Set Config
 
 Go into Bench folder
 ```shell
-cd frappe-bench
+cd frappe-bench-{project_name}
+# example:
+cd frappe-bench-mis
 ```
 
 Enable Server script
